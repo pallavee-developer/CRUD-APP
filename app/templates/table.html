@@ -1,0 +1,19 @@
+
+
+  <table border="1px solid black">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    {% for i in user_obj%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td><input type="text" name="name" value="{{i.name}}"> </td>
+        <td><input type="text" name="name" value="{{i.email}}"></td>
+        <td><a href="deletedata?id={{i.id}}">Delete</a></td>
+        <td><a href="updatedata?id={{i.id}}"> Update</td>
+    </tr>
+    {% endfor %}
+    
+  </table>
